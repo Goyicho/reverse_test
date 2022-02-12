@@ -16,7 +16,7 @@ def reverse_text(pages):
     
 	i = 0
 	while i < (len(pages)):
-	# reached the end of a page
+		# reached the end of a page
 		if pages[i] == "\b":
 			page = ""
 			for a in range(len(curr_page)-1,-1,-1):
@@ -26,9 +26,9 @@ def reverse_text(pages):
 			reversed_text.append(page)
 			curr_page = []
 			i += 1
-        # reached the end of a line
+        	# reached the end of a line
 		elif pages[i] == "\n":
-            # the last word before \n is not followed by a space
+            		# the last word before \n is not followed by a space
 			curr_line.append(curr_words)
 			curr_words = ""
 			# reverse the current line
@@ -41,7 +41,7 @@ def reverse_text(pages):
 			curr_page.append(line)
 			curr_line = []
 			i += 1
-        # reached the end of a word
+        	# reached the end of a word
 		elif pages[i] == " ":
 		    curr_line.append(curr_words)
 		    curr_words = ""
